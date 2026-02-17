@@ -1,5 +1,5 @@
 import { MotionConfig } from 'framer-motion'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { LogoMark } from './components/LogoMark'
 import { Background3D } from './components/Background3D'
@@ -14,7 +14,7 @@ function App() {
   const { theme, toggle } = useTheme()
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <MotionConfig reducedMotion="never">
         <div className="relative min-h-dvh bg-bg text-text">
           <Background3D />
@@ -44,7 +44,7 @@ function App() {
           </div>
         </div>
       </MotionConfig>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
